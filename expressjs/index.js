@@ -39,7 +39,7 @@ app.post('/upload-my-file', async (req, res) => {
             let file = req.files.file;
             
             //Use the mv() method to place the file in upload directory (i.e. "uploads")
-            file.mv('./uploads/' + avatar.name);
+            file.mv('./uploads/' + file.name);
 
             //send response
             res.send({
